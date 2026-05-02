@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Burāq — Kitāb al-Asrār</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .attribute-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0;
+      font-size: 0.88rem;
+    }
+    .attribute-table th,
+    .attribute-table td {
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--gold-pale);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .attribute-table th {
+      background: rgba(197,160,89,0.1);
+      color: var(--madder);
+      font-weight: 600;
+      font-variant: small-caps;
+      letter-spacing: 0.08em;
+      text-align: left;
+      width: 32%;
+    }
+    .attribute-table .arabic-cell {
+      font-family: var(--font-arabic);
+      direction: rtl;
+      font-size: 1.05em;
+    }
+    .prophetic-chain {
+      background: rgba(197,160,89,0.06);
+      border: 1px solid var(--gold-pale);
+      padding: 1rem 1.4rem;
+      margin: 1.2rem 0;
+      font-size: 0.85rem;
+      line-height: 1.9;
+      color: var(--ink-faded);
+      font-style: italic;
+    }
+    .prophetic-chain .isnad-header {
+      color: var(--madder);
+      font-style: normal;
+      font-weight: 600;
+      font-variant: small-caps;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.8rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1.5rem;
+    }
+    .feature-list li {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--carbon-soft);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .feature-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 0.6rem;
+      top: 0.3em;
+    }
+    @media (max-width: 600px) {
+      .feature-list { grid-template-columns: 1fr; }
+    }
+    .marginal-note {
+      float: right;
+      clear: right;
+      width: 140px;
+      margin: 0 -3rem 1rem 1.5rem;
+      font-size: 0.72rem;
+      font-style: italic;
+      color: var(--ink-faded);
+      line-height: 1.6;
+      border-left: 1.5px solid var(--gold-pale);
+      padding-left: 0.6rem;
+    }
+    @media (max-width: 780px) {
+      .marginal-note { float: none; width: 100%; margin: 0.8rem 0; border-left: none; border-top: 1px solid var(--gold-pale); padding: 0.5rem 0 0; }
+    }
+  </style>
+</head>
+<body>
+
+<main class="manuscript-page" role="main">
+  <div class="corner-tr" aria-hidden="true"></div>
+  <div class="corner-bl" aria-hidden="true"></div>
+
+  <div class="page-inner">
+    <span class="folio-number" aria-label="Folio 9 verso">fol. 9v</span>
+
+    <!-- Bismillah -->
+    <p class="bismillah" lang="ar" dir="rtl">
+      بِسْمِ اللهِ الرَّحْمَٰنِ الرَّحِيمِ
+    </p>
+
+    <!-- Page Title -->
+    <header class="page-title-block">
+      <p class="page-title-latin">Kitāb al-Asrār · Entry the Second</p>
+      <h1 class="page-title-main">On the Celestial Steed</h1>
+      <p class="page-title-arabic" lang="ar" dir="rtl">فِي ذِكْرِ الْبُرَاقِ مَرْكَبِ الْأَنْبِيَاءِ</p>
+    </header>
+
+    <!-- Creature Name -->
+    <div class="creature-name-block">
+      <span class="creature-name-en">Al-Burāq</span>
+      <span class="creature-name-ar" lang="ar" dir="rtl">الْبُرَاق</span>
+      <span class="creature-epithet">
+        "The Lightning-One" · Conveyance of the Prophets in the Night Journey
+      </span>
+    </div>
+
+    <div class="manuscript-rule" aria-hidden="true">✦</div>
+
+    <!-- Illustration Placeholder -->
+    <figure class="illustration-frame" role="img" aria-label="Illustration placeholder for al-Burāq">
+      <div class="illustration-placeholder-text">
+        <span class="icon" aria-hidden="true">🐎</span>
+        <p>
+          <em>Space reserved for a Persian miniature depicting<br>
+          al-Burāq, white and winged, bearing the Prophet ﷺ<br>
+          through the celestial spheres on the Night Journey.</em>
+        </p>
+      </div>
+    </figure>
+    <figcaption class="illustration-caption">
+      Fig. II · <em>Al-Burāq fī Laylat al-Miʿrāj</em> · After the Timurid miniature tradition,
+      ca. 840 AH
+    </figcaption>
+
+    <!-- Attributes Table -->
+    <h2 class="section-header">Essential Attributes</h2>
+    <table class="attribute-table" aria-label="Attributes of al-Burāq">
+      <tbody>
+        <tr>
+          <th scope="row">Classification</th>
+          <td>Celestial Creature of the Heavenly Realms (<span class="arabic-inline" lang="ar" dir="rtl">مَخْلُوقٌ سَمَاوِيّ</span>)</td>
+        </tr>
+        <tr>
+          <th scope="row">Ḥadīth Locus</th>
+          <td>Ṣaḥīḥ Muslim, Kitāb al-Īmān; Ṣaḥīḥ al-Bukhārī, Kitāb Manāqib al-Anṣār</td>
+        </tr>
+        <tr>
+          <th scope="row">Nature</th>
+          <td>Luminous; swifter than lightning; of intermediate size between donkey and mule</td>
+        </tr>
+        <tr>
+          <th scope="row">Function</th>
+          <td>Divine conveyance for prophets; vehicle of the Isrāʾ and Miʿrāj</td>
+        </tr>
+        <tr>
+          <th scope="row">Arabic Name</th>
+          <td class="arabic-cell" lang="ar" dir="rtl">الْبُرَاق</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Scriptural Origins -->
+    <h2 class="section-header">Scriptural Origins</h2>
+
+    <div class="manuscript-quote">
+      <span class="arabic-block" lang="ar" dir="rtl">
+        سُبْحَانَ الَّذِي أَسْرَىٰ بِعَبْدِهِ لَيْلًا مِّنَ الْمَسْجِدِ الْحَرَامِ إِلَى الْمَسْجِدِ الْأَقْصَى الَّذِي بَارَكْنَا حَوْلَهُ
+      </span>
+      <p class="translation">
+        "Exalted is He who transported His servant by night from the Sacred Mosque
+        to the Furthest Mosque, whose surroundings We have blessed…"
+      </p>
+      <span class="source">— Sūrat al-Isrāʾ (The Night Journey), 17:1</span>
+    </div>
+
+    <p class="manuscript-text">
+      While the Qurʾān records the divine event of the Night Journey, it is in
+      the <span class="rubric">prophetic narrations</span> that the Burāq finds
+      its fullest description. The foundational account is that preserved by
+      <span class="rubric">Anas ibn Mālik</span> (may God be pleased with him)
+      in <em>Ṣaḥīḥ Muslim</em>, wherein the Messenger ﷺ recounts how
+      <span class="arabic-inline" lang="ar" dir="rtl">جِبْرِيل</span> — the
+      archangel Gabriel — brought to him the Burāq, and the creature shied
+      from the Prophet ﷺ until Gabriel reproached it, saying:
+      <em>"Is it from Muhammad that you hold back? For by God, no one more honoured
+      than he has ever ridden you."</em>
+    </p>
+
+    <div class="prophetic-chain">
+      <span class="isnad-header">From the Ḥadīth of Mālik ibn Ṣaʿṣaʿa (Ṣaḥīḥ al-Bukhārī, no. 3887)</span>
+      The Prophet ﷺ said: "Then a white animal was brought to me, smaller than
+      a mule and larger than a donkey…" Its stride reaches as far as the eye
+      can see. Gabriel placed me upon it, and it set off with me until we
+      reached the lowest heaven…"
+    </div>
+
+    <div class="manuscript-rule" aria-hidden="true">❧</div>
+
+    <!-- Physical Description -->
+    <h2 class="section-header">Physical Description</h2>
+
+    <aside class="marginal-note" aria-label="Marginal gloss">
+      <em>The name al-Burāq derives from the root
+      <span lang="ar" dir="rtl">ب ر ق</span>
+      (barq) — "lightning" — indicating both its speed and its luminous,
+      gleaming quality.</em>
+    </aside>
+
+    <p class="manuscript-text has-dropcap">
+      <span class="rubric">In the authenticated traditions</span>, the Burāq
+      is described as white (<span class="arabic-inline" lang="ar" dir="rtl">أَبْيَض</span>)
+      and luminous, its very body emanating a radiance appropriate to a creature
+      of the celestial realms. It is larger than a donkey yet smaller than a mule —
+      a size suited to carry a prophet in dignity. Its most remarkable characteristic
+      is its stride: each step falls at the furthest limit of the rider's sight,
+      covering in one bound what no earthly mount could traverse in a day's journey.
+    </p>
+
+    <p class="manuscript-text">
+      Later traditions and the pictorial traditions of the Persian miniature schools —
+      particularly those of the <span class="rubric">Timurid</span> and
+      <span class="rubric">Safavid</span> ateliers — elaborated the Burāq's form
+      considerably, depicting it with a human face, the body of a horse, the wings
+      of an eagle or peacock, and a tail adorned with peacock feathers. Scholars
+      such as <span class="rubric">al-Qasṭallānī</span> note these elaborations
+      while affirming that the core authenticated description mentions only its
+      whiteness, its intermediate size, and the miracle of its stride. God knows
+      best the full reality of His creatures.
+    </p>
+
+    <!-- Physical Features List -->
+    <h2 class="section-header">Described Features</h2>
+    <ul class="feature-list" role="list">
+      <li>White, gleaming body</li>
+      <li>Larger than donkey, smaller than mule</li>
+      <li>Stride reaching the horizon</li>
+      <li>Brought by the archangel Gabriel</li>
+      <li>Capable of celestial travel</li>
+      <li>Previously ridden by earlier prophets</li>
+      <li>Possessed of awareness and temperament</li>
+      <li>Tethered at the Furthest Mosque (al-Aqṣā)</li>
+    </ul>
+
+    <!-- The Night Journey -->
+    <h2 class="section-header">The Isrāʾ: Journey of the Night</h2>
+
+    <p class="manuscript-text">
+      Upon the Burāq, the Prophet Muḥammad ﷺ was carried in a single night
+      from the <span class="rubric">Masjid al-Ḥarām</span> in Makkah to the
+      <span class="rubric">Masjid al-Aqṣā</span> in Jerusalem — the first
+      stage of the journey known as the
+      <span class="arabic-inline" lang="ar" dir="rtl">الْإِسْرَاء</span>
+      (Isrāʾ, the Night Journey). There, the Prophet ﷺ led all the prophets
+      in prayer, and the Burāq was tethered at the ring by the gate of the
+      mosque. Thereafter commenced the
+      <span class="arabic-inline" lang="ar" dir="rtl">الْمِعْرَاج</span>
+      (Miʿrāj, the Ascension) through the seven heavens — though scholars
+      differ as to whether the Burāq accompanied the Prophet ﷺ beyond Jerusalem
+      or whether Gabriel alone guided the ascent thereafter.
+    </p>
+
+    <div class="manuscript-quote">
+      <span class="arabic-block" lang="ar" dir="rtl">
+        ثُمَّ أُتِيتُ بِدَابَّةٍ أَبْيَضَ يُقَالُ لَهُ الْبُرَاقُ فَوْقَ الْحِمَارِ وَدُونَ الْبَغْلِ يَضَعُ خَطْوَهُ عِنْدَ أَقْصَى طَرْفِهِ
+      </span>
+      <p class="translation">
+        "Then I was brought a white animal called the Burāq — larger than
+        a donkey yet smaller than a mule — which places its step at the
+        furthest limit of its sight."
+      </p>
+      <span class="source">— Ṣaḥīḥ Muslim, Kitāb al-Īmān, no. 162</span>
+    </div>
+
+    <div class="colophon-block">
+      <p>
+        <em>Thus concludes the second entry of the Bestiary of Signs.<br>
+        May God's blessings and peace be upon the one who rode the Burāq.</em><br>
+        <span lang="ar" dir="rtl" class="arabic-inline" style="font-size:1rem;">صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</span>
+      </p>
+    </div>
+
+    <div class="catchword" aria-label="Catchword">
+      <em>Continuing: On the Jassāsa, the Spy of the Dajjāl …</em>
+    </div>
+
+    <!-- Page Navigation -->
+    <nav class="page-nav" aria-label="Page navigation">
+      <a href="dabbat.html">← The Dābba</a>
+      <span class="nav-center" aria-hidden="true">✦</span>
+      <a href="index.html">Table of Contents →</a>
+    </nav>
+
+  </div><!-- /.page-inner -->
+</main>
+
+</body>
+</html>
