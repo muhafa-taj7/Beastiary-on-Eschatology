@@ -1,0 +1,531 @@
+/* ============================================================
+   KITĀB AL-ASRĀR — Master Stylesheet
+   Islamic Eschatological Bestiary
+   Visual Model: Ajā'ib al-makhlūqāt (13th c. manuscript)
+   ============================================================ */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* ── Design Tokens ── */
+:root {
+  --parchment:      #F4EBD0;
+  --parchment-dark: #EAD9B0;
+  --parchment-mid:  #EFE3C0;
+  --carbon:         #1A1A1A;
+  --carbon-soft:    #2E2B26;
+  --madder:         #A33333;
+  --madder-dark:    #7C2323;
+  --gold:           #C5A059;
+  --gold-light:     #D9B96B;
+  --gold-pale:      #E8D4A0;
+  --ink-faded:      #3D3428;
+
+  --font-latin:     'EB Garamond', 'Palatino Linotype', Georgia, serif;
+  --font-arabic:    'Amiri', 'Noto Naskh Arabic', 'Traditional Arabic', serif;
+
+  --page-max:       860px;
+  --border-outer:   2.5px solid var(--gold);
+  --border-inner:   1px solid var(--gold);
+  --gap-border:     5px;
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 17px; scroll-behavior: smooth; }
+
+body {
+  background-color: #C8B070;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 4px,
+      rgba(0,0,0,0.025) 4px,
+      rgba(0,0,0,0.025) 5px
+    ),
+    radial-gradient(ellipse at 30% 20%, rgba(180,140,60,0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(120,90,30,0.25) 0%, transparent 55%);
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
+  font-family: var(--font-latin);
+  color: var(--carbon);
+}
+
+/* ── Manuscript Page Container ── */
+.manuscript-page {
+  position: relative;
+  max-width: var(--page-max);
+  margin: 0 auto 3rem;
+  background-color: var(--parchment);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, rgba(210,185,130,0.18) 0%, transparent 30%, rgba(210,185,130,0.12) 100%);
+  padding: 0;
+  /* Double-border via outline + box-shadow technique */
+  outline: var(--border-inner) solid var(--gold);
+  outline-offset: var(--gap-border);
+  box-shadow:
+    0 0 0 calc(var(--gap-border) + 2.5px) var(--gold),
+    0 8px 40px rgba(0,0,0,0.35),
+    0 2px 8px rgba(0,0,0,0.2),
+    inset 0 0 60px rgba(180,140,60,0.06);
+}
+
+/* Inner content padding */
+.page-inner {
+  padding: 3.5rem 4.5rem;
+}
+
+/* ── Corner Ornaments ── */
+.manuscript-page::before,
+.manuscript-page::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-color: var(--gold);
+  border-style: solid;
+  z-index: 2;
+}
+.manuscript-page::before {
+  top: -12px; left: -12px;
+  border-width: 3px 0 0 3px;
+}
+.manuscript-page::after {
+  bottom: -12px; right: -12px;
+  border-width: 0 3px 3px 0;
+}
+
+/* Extra corners via wrapper pseudo */
+.corner-tr, .corner-bl {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-color: var(--gold);
+  border-style: solid;
+  z-index: 2;
+  pointer-events: none;
+}
+.corner-tr { top: -12px; right: -12px; border-width: 3px 3px 0 0; }
+.corner-bl { bottom: -12px; left: -12px; border-width: 0 0 3px 3px; }
+
+/* ── Bismillah Header ── */
+.bismillah {
+  text-align: center;
+  font-family: var(--font-arabic);
+  font-size: 1.7rem;
+  color: var(--madder);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.4rem;
+  line-height: 1.8;
+  direction: rtl;
+}
+
+/* ── Page Title / Colophon Header ── */
+.page-title-block {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--gold);
+  position: relative;
+}
+.page-title-block::after {
+  content: '❧';
+  display: block;
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.page-title-latin {
+  font-family: var(--font-latin);
+  font-size: 0.78rem;
+  font-style: italic;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+  margin-bottom: 0.4rem;
+}
+
+.page-title-main {
+  font-family: var(--font-latin);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--madder);
+  line-height: 1.2;
+  margin-bottom: 0.3rem;
+}
+
+.page-title-arabic {
+  font-family: var(--font-arabic);
+  font-size: 1.6rem;
+  color: var(--madder-dark);
+  direction: rtl;
+  line-height: 2;
+}
+
+.page-subtitle {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--ink-faded);
+  margin-top: 0.3rem;
+}
+
+/* ── Horizontal Rule / Interlinear Divider ── */
+.manuscript-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.8rem 0;
+  color: var(--gold);
+  font-size: 1rem;
+}
+.manuscript-rule::before,
+.manuscript-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+/* ── Creature Entry Header ── */
+.creature-name-block {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.creature-name-en {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--madder);
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+.creature-name-ar {
+  font-family: var(--font-arabic);
+  font-size: 2rem;
+  color: var(--carbon-soft);
+  direction: rtl;
+  line-height: 2.2;
+  display: block;
+}
+
+.creature-epithet {
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--ink-faded);
+  display: block;
+  margin-top: 0.2rem;
+}
+
+/* ── Illustration Placeholder ── */
+.illustration-frame {
+  margin: 1.8rem auto;
+  max-width: 420px;
+  border: 1.5px solid var(--gold);
+  outline: 4px solid var(--gold-pale);
+  outline-offset: 4px;
+  background-color: var(--parchment-dark);
+  background-image:
+    radial-gradient(ellipse at 50% 40%, rgba(197,160,89,0.15) 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E");
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration-frame::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 0.5px dashed var(--gold);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.illustration-placeholder-text {
+  text-align: center;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.illustration-placeholder-text .icon {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  opacity: 0.4;
+  filter: sepia(1);
+}
+
+.illustration-placeholder-text p {
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--ink-faded);
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+.illustration-caption {
+  text-align: center;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--ink-faded);
+  margin-top: 0.6rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Drop Cap ── */
+.has-dropcap::first-letter {
+  float: left;
+  font-family: var(--font-latin);
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 0.8;
+  color: var(--madder);
+  padding-right: 0.12em;
+  padding-top: 0.06em;
+  margin-top: 0.05em;
+}
+
+/* ── Section Headers (Rubrication) ── */
+.section-header {
+  font-family: var(--font-latin);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--madder);
+  margin: 2rem 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.section-header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold-pale), transparent);
+}
+
+/* ── Body Text ── */
+.manuscript-text {
+  font-family: var(--font-latin);
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--carbon-soft);
+  text-align: justify;
+  hyphens: auto;
+  margin-bottom: 1rem;
+}
+
+.manuscript-text + .manuscript-text {
+  text-indent: 1.5em;
+}
+
+/* Rubricated inline terms */
+.rubric {
+  color: var(--madder);
+  font-weight: 600;
+}
+
+/* Arabic inline quote */
+.arabic-inline {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  display: inline-block;
+  font-size: 1.15em;
+  line-height: 1.9;
+  color: var(--carbon);
+  unicode-bidi: isolate;
+}
+
+/* ── Block Quote (Hadith / Quranic Verse) ── */
+.manuscript-quote {
+  margin: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
+  border-left: 3px solid var(--gold);
+  background: rgba(197,160,89,0.07);
+  position: relative;
+}
+
+.manuscript-quote .arabic-block {
+  font-family: var(--font-arabic);
+  font-size: 1.25rem;
+  direction: rtl;
+  text-align: right;
+  line-height: 2.2;
+  color: var(--carbon);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.manuscript-quote .translation {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--ink-faded);
+  line-height: 1.65;
+}
+
+.manuscript-quote .source {
+  display: block;
+  text-align: right;
+  font-size: 0.76rem;
+  color: var(--madder);
+  margin-top: 0.5rem;
+  letter-spacing: 0.06em;
+}
+
+/* ── Table of Contents ── */
+.toc-list {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.toc-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.toc-entry-num {
+  font-variant: small-caps;
+  font-size: 0.82rem;
+  color: var(--madder);
+  min-width: 2.2rem;
+  flex-shrink: 0;
+}
+
+.toc-entry-title {
+  flex: 1;
+}
+
+.toc-entry-title a {
+  color: var(--carbon-soft);
+  text-decoration: none;
+  font-weight: 500;
+}
+.toc-entry-title a:hover {
+  color: var(--madder);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+}
+
+.toc-entry-title .arabic-toc {
+  font-family: var(--font-arabic);
+  font-size: 1.05em;
+  direction: rtl;
+  margin-left: 0.6em;
+  color: var(--ink-faded);
+}
+
+.toc-dots {
+  flex: 1;
+  border-bottom: 1.5px dotted var(--gold-pale);
+  margin: 0 0.5rem;
+  position: relative;
+  top: -3px;
+}
+
+.toc-folio {
+  font-variant: small-caps;
+  font-size: 0.82rem;
+  color: var(--ink-faded);
+  min-width: 2rem;
+  text-align: right;
+}
+
+/* ── Colophon / Metadata block ── */
+.colophon-block {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gold-pale);
+  font-size: 0.8rem;
+  color: var(--ink-faded);
+  font-style: italic;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* ── Page-Turn Navigation ── */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gold);
+  gap: 1rem;
+}
+
+.page-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--madder);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--gold-pale);
+  background: rgba(197,160,89,0.06);
+  transition: background 0.2s, border-color 0.2s;
+}
+.page-nav a:hover {
+  background: rgba(197,160,89,0.18);
+  border-color: var(--gold);
+}
+
+.page-nav .nav-center {
+  font-size: 1rem;
+  color: var(--gold);
+}
+
+/* ── Folio Number (decorative, top corner) ── */
+.folio-number {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.8rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+}
+
+/* ── Catchword (bottom right of page) ── */
+.catchword {
+  text-align: right;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--ink-faded);
+  margin-top: 1.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  .page-inner  { padding: 2.2rem 1.6rem; }
+  .has-dropcap::first-letter { font-size: 3.2rem; }
+  .page-title-main { font-size: 1.6rem; }
+  .creature-name-en { font-size: 1.5rem; }
+  .creature-name-ar { font-size: 1.5rem; }
+  .manuscript-quote { margin: 1.2rem 0.5rem; }
+  .page-nav { flex-direction: column; align-items: stretch; text-align: center; }
+  .illustration-frame { max-width: 100%; }
+}
+
+@media print {
+  body { background: white; padding: 0; }
+  .manuscript-page { box-shadow: none; margin: 0; max-width: 100%; }
+  .page-nav { display: none; }
+}
