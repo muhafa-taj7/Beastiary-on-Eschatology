@@ -573,3 +573,48 @@ td, th {
   cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8bGluZSB4MT0iNSIgeTE9IjI3IiB4Mj0iMjciIHkyPSI1IiBzdHJva2U9IiMxQTFBMUEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTI3LDUgQzIyLDcgMTYsMTMgOSwyMSBDNywyMyA1LDI3IDUsMjcgQzgsMjQgMTIsMTkgMTYsMTMgQzIwLDggMjUsNSAyNyw1WiIKICAgICAgICBmaWxsPSIjQTMzMzMzIiBzdHJva2U9IiMxQTFBMUEiIHN0cm9rZS13aWR0aD0iMC42Ii8+CiAgPHBhdGggZD0iTTI3LDUgQzI0LDggMjAsMTIgMTYsMTcgQzEzLDIwIDEwLDIzIDcsMjYgQzYsMjcgNSwyNyA1LDI3IEM3LDI1IDEwLDIyIDE0LDE4IEMxOCwxMyAyMyw4IDI3LDVaIgogICAgICAgIGZpbGw9IiNDNTU1NTUiIHN0cm9rZT0ibm9uZSIvPgogIDxsaW5lIHgxPSIyNyIgeTE9IjUiIHgyPSI1IiB5Mj0iMjciIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIwLjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWRhc2hhcnJheT0iMiwyIi8+CiAgPGxpbmUgeDE9IjUiIHkxPSIyNyIgeDI9IjkiIHkyPSIyMSIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjUiIHkxPSIyNyIgeDI9IjEwIiB5Mj0iMjMiIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNSIgeTE9IjI3IiB4Mj0iNyIgeTI9IjI0IiBzdHJva2U9IiNFQUQ5QjAiIHN0cm9rZS13aWR0aD0iMC42IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI1IiBjeT0iMjciIHI9IjEuNCIgZmlsbD0iIzFBMUExQSIvPgo8L3N2Zz4=') 5 27, text;
 }
  
+/* ── Manuscript Cats ── */
+.manuscript-page { overflow: visible; }
+
+.margin-cat {
+  position: absolute;
+  right: -48px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 64px;
+  height: 88px;
+  pointer-events: none;
+  opacity: 0.92;
+  filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.18));
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.margin-cat:hover {
+  transform: translateY(-55%) scale(1.08);
+  opacity: 1;
+}
+
+.manuscript-rule.cat-rule { gap: 0.5rem; }
+.manuscript-rule.cat-rule .cat-ornament {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+}
+.manuscript-rule.cat-rule .cat-ornament svg {
+  width: 28px;
+  height: 30px;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12));
+  transition: transform 0.3s ease;
+}
+.manuscript-rule.cat-rule .cat-ornament svg:hover {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.colophon-cat {
+  display: block;
+  margin: 0 auto 1rem;
+  filter: drop-shadow(1px 2px 4px rgba(0,0,0,0.15));
+  transition: transform 0.35s ease;
+}
+.colophon-cat:hover { transform: scale(1.06) translateY(-3px); }
+
+@media (max-width: 680px) { .margin-cat { display: none; } }
