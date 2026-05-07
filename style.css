@@ -536,3 +536,45 @@ body {
   .manuscript-page { box-shadow: none; margin: 0; max-width: 100%; }
   .page-nav { display: none; }
 }
+
+/* ============================================================
+   CUSTOM MANUSCRIPT CURSORS
+   Add this block to the bottom of style.css
+   ============================================================ */
+ 
+/* 1. DEFAULT — Quill pen nib
+      Hotspot: tip of the nib at bottom-left (4 28) */
+html, body, .manuscript-page, p, div, span, figure, table {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48bGluZSB4MT0iNCIgeTE9IjI4IiB4Mj0iMjYiIHkyPSI0IiBzdHJva2U9IiMxQTFBMUEiIHN0cm9rZS13aWR0aD0iMS40IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMjYsNCBRMTgsOCAxMCwxOCBRNywyMSA0LDI4IFE5LDIyIDE0LDE0IFExOSw2IDI2LDRaIiBmaWxsPSIjQzVBMDU5IiBmaWxsLW9wYWNpdHk9IjAuODUiIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIwLjciLz48cGF0aCBkPSJNMjYsNCBRMjIsMTAgMTgsMTYgUTE0LDIwIDEwLDI0IFE3LDI2IDQsMjggUTgsMjMgMTMsMTcgUTIwLDkgMjYsNFoiIGZpbGw9IiNFOEQ0QTAiIGZpbGwtb3BhY2l0eT0iMC42IiBzdHJva2U9IiMxQTFBMUEiIHN0cm9rZS13aWR0aD0iMC41Ii8+PGxpbmUgeDE9IjQiIHkxPSIyOCIgeDI9IjgiIHkyPSIyMyIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjAuOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGVsbGlwc2UgY3g9IjQiIGN5PSIyOCIgcng9IjEuMiIgcnk9IjEuMiIgZmlsbD0iIzFBMUExQSIvPjwvc3ZnPg==') 4 28, auto;
+}
+ 
+/* 2. POINTER — Manicule (pointing hand with sleeve)
+      Hotspot: fingertip (8 6) */
+a,
+button,
+.page-nav a,
+.toc-entry-title a,
+[role="link"],
+label {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNOCw2IFE3LDQgOCwzIFE5LDIgMTAsMyBRMTEsNCAxMCw2IEwxMCwxNCIgZmlsbD0iI0VBRDlCMCIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNMTAsOCBRMTAsNiAxMSw1LjUgUTEyLDUgMTMsNiBRMTQsNyAxMyw5IEwxMywxNCIgZmlsbD0iI0VBRDlCMCIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNMTMsMTAgUTEzLDggMTQsOCBRMTUsOCAxNSwxMCBMMTUsMTQiIGZpbGw9IiNFQUQ5QjAiIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBhdGggZD0iTTE1LDExIFExNSwxMCAxNiwxMCBRMTcsMTAgMTcsMTEgTDE3LDE0IiBmaWxsPSIjRUFEOUIwIiBzdHJva2U9IiMxQTFBMUEiIHN0cm9rZS13aWR0aD0iMSIvPjxwYXRoIGQ9Ik04LDE0IFE3LDEzIDcsMTQgTDcsMjAgUTcsMjIgOSwyMiBMMTcsMjIgUTE5LDIyIDE5LDIwIEwxOSwxNCBMOCwxNFoiIGZpbGw9IiNFQUQ5QjAiIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIxIi8+PHJlY3QgeD0iNyIgeT0iMjIiIHdpZHRoPSIxMiIgaGVpZ2h0PSIzIiByeD0iMSIgZmlsbD0iI0M1QTA1OSIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjAuOCIvPjxsaW5lIHgxPSIxMCIgeTE9IjIyIiB4Mj0iMTAiIHkyPSIyNSIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxsaW5lIHgxPSIxMyIgeTE9IjIyIiB4Mj0iMTMiIHkyPSIyNSIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxsaW5lIHgxPSIxNiIgeTE9IjIyIiB4Mj0iMTYiIHkyPSIyNSIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjAuNSIvPjxwYXRoIGQ9Ik03LDI1IEw1LDMwIEwyMSwzMCBMMTksMjVaIiBmaWxsPSIjQTMzMzMzIiBzdHJva2U9IiMxQTFBMUEiIHN0cm9rZS13aWR0aD0iMC44Ii8+PGxpbmUgeDE9IjUiIHkxPSIyOCIgeDI9IjIxIiB5Mj0iMjgiIHN0cm9rZT0iI0M1QTA1OSIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48L3N2Zz4=') 8 6, pointer;
+}
+ 
+/* 3. TEXT — Reed pen / Qalam
+      Hotspot: centre of nib (16 16) */
+p,
+.manuscript-text,
+.manuscript-quote,
+.bibliographic-note,
+.toc-creature-desc,
+.analysis-block,
+.hadith-chain,
+blockquote,
+td, th {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cmVjdCB4PSIxNC41IiB5PSIyIiB3aWR0aD0iMyIgaGVpZ2h0PSIyMiIgcng9IjEuMiIgZmlsbD0iI0M1QTA1OSIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjAuOSIvPjxwYXRoIGQ9Ik0xNC41LDI0IEwxNiwyOCBMMTcuNSwyNFoiIGZpbGw9IiMxQTFBMUEiLz48bGluZSB4MT0iMTQuNSIgeTE9IjgiIHgyPSIxNy41IiB5Mj0iOCIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjAuNyIvPjxsaW5lIHgxPSIxNC41IiB5MT0iMTQiIHgyPSIxNy41IiB5Mj0iMTQiIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIwLjciLz48bGluZSB4MT0iMTQuNSIgeTE9IjIwIiB4Mj0iMTcuNSIgeTI9IjIwIiBzdHJva2U9IiMxQTFBMUEiIHN0cm9rZS13aWR0aD0iMC43Ii8+PGVsbGlwc2UgY3g9IjE2IiBjeT0iMjguNSIgcng9IjEiIHJ5PSIxIiBmaWxsPSIjMUExQTFBIi8+PC9zdmc+') 16 16, text;
+}
+ 
+/* 4. WAIT — Crescent & rotating stars
+      Hotspot: centre (16 16) */
+.illustration-frame,
+img {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48c3R5bGU+QGtleWZyYW1lcyBzcGlue2Zyb217dHJhbnNmb3JtOnJvdGF0ZSgwZGVnKX10b3t0cmFuc2Zvcm06cm90YXRlKDM2MGRlZyl9fS5vcmJpdHthbmltYXRpb246c3BpbiAycyBsaW5lYXIgaW5maW5pdGU7dHJhbnNmb3JtLW9yaWdpbjoxNnB4IDE2cHg7fTwvc3R5bGU+PHBhdGggZD0iTTE2LDUgQTExLDExIDAgMSwwIDE2LDI3IEE3LDcgMCAxLDEgMTYsNVoiIGZpbGw9IiNDNUEwNTkiIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIwLjgiLz48ZyBjbGFzcz0ib3JiaXQiPjxwb2x5Z29uIHBvaW50cz0iMTYsMyAxNi42LDQuOCAxOC41LDQuOCAxNyw1LjkgMTcuNiw3LjcgMTYsNi42IDE0LjQsNy43IDE1LDUuOSAxMy41LDQuOCAxNS40LDQuOCIgZmlsbD0iI0EzMzMzMyIvPjxwb2x5Z29uIHBvaW50cz0iMTYsMjkgMTYuNiwyNy4yIDE4LjUsMjcuMiAxNywyNi4xIDE3LjYsMjQuMyAxNiwyNS40IDE0LjQsMjQuMyAxNSwyNi4xIDEzLjUsMjcuMiAxNS40LDI3LjIiIGZpbGw9IiNBMzMzMzMiLz48L2c+PC9zdmc+') 16 16, wait;
