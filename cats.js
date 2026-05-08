@@ -523,7 +523,6 @@ const CATCHWORD_HIJABI = `
 
    // Function for Margin/Corner cats to "Purr"
 document.querySelectorAll('.cat-margin, .cat-corner-peek').forEach(cat => {
-  cat.style.cursor = "pointer";
   cat.addEventListener('click', function(e) {
     // Trigger animation
     this.classList.remove('cat-purr');
