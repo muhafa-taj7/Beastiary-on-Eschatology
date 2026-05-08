@@ -286,35 +286,34 @@
   /* ================================================================
      5. CATCHWORD CATS — sleepy hijabi + sleepy topi side by side
      ================================================================ */
-  const CATCHWORD_HIJABI = `
-   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 40" width="40" height="30"
-       class="cat-sleepy cat-sleepy-hijabi" aria-hidden="true">
+const CATCHWORD_HIJABI = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 40" width="40" height="30"
+       class="cat-sleepy cat-interact" onclick="wakeCat(this)" aria-hidden="true">
     <ellipse cx="26" cy="25" rx="20" ry="17" fill="#F4EBD0"/>
-    
     <polygon points="9,17 4,4 16,14" fill="#F4EBD0"/>
     <polygon points="43,17 48,4 36,14" fill="#F4EBD0"/>
 
-    <path d="
-      M 8,38
-      C 3,15 15,10 26,9
-      C 42,10 48,15 44,38
-      L 8,38
-      Z
-      M 14,24
-      C 14,17 20,15 26,15
-      C 32,15 38,17 38,24
-      C 38,30 32,32 26,32
-      C 20,32 14,30 14,24
-      Z" fill="#A33333" fill-rule="evenodd" stroke="#7C2323" stroke-width="1.2" />
+    <path d="M 5,38 C 2,15 10,8 26,8 C 42,8 50,15 47,38 L 5,38 Z M 14,24 C 14,17 20,15 26,15 C 32,15 38,17 38,24 C 38,30 32,32 26,32 C 20,32 14,30 14,24 Z" 
+          fill="#A33333" fill-rule="evenodd" stroke="#7C2323" stroke-width="1.2" />
 
     <circle cx="26" cy="34" r="2" fill="#C5A059"/>
     
-    <path d="M17,24 Q20,22 23,24" stroke="#1A1A1A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-    <path d="M29,24 Q32,22 35,24" stroke="#1A1A1A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <g class="eye-closed">
+      <path d="M17,24 Q20,22 23,24" stroke="#1A1A1A" stroke-width="1.4" fill="none" />
+      <path d="M29,24 Q32,22 35,24" stroke="#1A1A1A" stroke-width="1.4" fill="none" />
+    </g>
+
+    <g class="eye-open" style="display:none;">
+      <circle cx="20" cy="24" r="2.5" fill="#1A1A1A"/>
+      <circle cx="32" cy="24" r="2.5" fill="#1A1A1A"/>
+    </g>
+
     <polygon points="26,28 24,31 28,31" fill="#e8b4b8"/>
     
-    <text x="40" y="13" font-size="7" fill="#A33333" font-family="serif" opacity="0.7">z</text>
-    <text x="44" y="7"  font-size="5" fill="#A33333" font-family="serif" opacity="0.5">z</text>
+    <g class="z-text">
+      <text x="40" y="13" font-size="7" fill="#A33333" font-family="serif" opacity="0.7">z</text>
+      <text x="44" y="7"  font-size="5" fill="#A33333" font-family="serif" opacity="0.5">z</text>
+    </g>
   </svg>`;
 
   const CATCHWORD_TOPI = `
@@ -521,4 +520,41 @@
       </span>`;
   }
 
+
+   // Function for Margin/Corner cats to "Purr"
+document.querySelectorAll('.cat-margin, .cat-corner-peek').forEach(cat => {
+  cat.style.cursor = "pointer";
+  cat.addEventListener('click', function(e) {
+    // Trigger animation
+    this.classList.remove('cat-purr');
+    void this.offsetWidth; // trigger reflow
+    this.classList.add('cat-purr');
+
+    // Create a "Meow" (Miyāw) floating text
+    const meow = document.createElement('div');
+    meow.className = 'cat-speech';
+    meow.innerText = 'مياو'; // Arabic for Meow
+    meow.style.left = (e.pageX - 20) + 'px';
+    meow.style.top = (e.pageY - 40) + 'px';
+    document.body.appendChild(meow);
+
+    // Clean up
+    setTimeout(() => meow.remove(), 2000);
+  });
+});
+
+// Function for the Catchword cat to wake up
+function wakeCat(element) {
+  element.classList.add('cat-awake');
+  
+  // Go back to sleep after 3 seconds
+  setTimeout(() => {
+    element.classList.remove('cat-awake');
+  }, 3000);
+}
+
+   
+
 })();
+
+
