@@ -14,44 +14,40 @@
   // Hijabi header peeker — scarf wraps head, fabric drapes down both sides
   const HEADER_HIJABI = `
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 72" width="90" height="72"
-       class="cat-header-hijabi" aria-label="A hijabi cat peeks over the manuscript border" role="img">
-    <!-- shoulders peeking above border -->
+       class="cat-header-hijabi" role="img">
     <ellipse cx="45" cy="82" rx="32" ry="20" fill="#A33333"/>
-    <!-- head -->
     <ellipse cx="45" cy="46" rx="26" ry="24" fill="#F4EBD0"/>
-    <!-- ears — behind scarf so only tips show -->
+    
     <polygon points="22,30 14,12 32,26" fill="#F4EBD0"/>
     <polygon points="68,30 76,12 58,26" fill="#F4EBD0"/>
-    <polygon points="23,29 16,16 31,26" fill="#e8b4b8"/>
+ <polygon points="23,29 16,16 31,26" fill="#e8b4b8"/>
     <polygon points="67,29 74,16 59,26" fill="#e8b4b8"/>
-    <!-- HIJAB SCARF: cap over top of head -->
-    <ellipse cx="45" cy="30" rx="28" ry="18" fill="#A33333"/>
-    <!-- left fabric drape going down -->
-    <path d="M19,44 Q10,60 14,80" stroke="#7C2323" stroke-width="2" fill="#A33333" opacity="0.95"/>
-    <!-- right fabric drape going down -->
-    <path d="M71,44 Q80,60 76,80" stroke="#7C2323" stroke-width="2" fill="#A33333" opacity="0.95"/>
-    <!-- chin wrap — a gentle curve under the face showing fabric -->
-    <path d="M19,52 Q45,62 71,52" fill="none" stroke="#7C2323" stroke-width="3" opacity="0.4"/>
-    <!-- scarf fold crease at top -->
-    <path d="M20,34 Q45,22 70,34" fill="none" stroke="#7C2323" stroke-width="1.5" opacity="0.35"/>
-    <!-- eyes -->
-    <ellipse cx="34" cy="44" rx="5" ry="6" fill="#1A1A1A"/>
-    <ellipse cx="56" cy="44" rx="5" ry="6" fill="#1A1A1A"/>
-    <ellipse cx="35.5" cy="42.5" rx="1.8" ry="2.2" fill="white"/>
-    <ellipse cx="57.5" cy="42.5" rx="1.8" ry="2.2" fill="white"/>
-    <!-- nose -->
-    <polygon points="45,50 42,54 48,54" fill="#e8b4b8"/>
-    <!-- mouth -->
-    <path d="M42,54 Q45,58 48,54" stroke="#2E2B26" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <path d="
+      M 15,70
+      C 10,40 20,20 45,20
+      C 70,20 80,40 75,70
+      L 15,70
+      Z
+      M 25,50
+      C 25,38 35,34 45,31
+      C 55,34 65,38 65,59
+      C 65,60 55,64 45,64
+      C 35,64 25,60 25,59
+      Z" fill="#A33333" fill-rule="evenodd" stroke="#7C2323" stroke-width="1.5" />
+
+    <circle cx="45" cy="66" r="2.5" fill="#C5A059"/>
+    <ellipse cx="34" cy="48" rx="5" ry="6" fill="#1A1A1A"/>
+    <ellipse cx="56" cy="48" rx="5" ry="6" fill="#1A1A1A"/>
+    <ellipse cx="35.5" cy="46" rx="1.8" ry="2.2" fill="white"/>
     <!-- whiskers -->
     <line x1="18" y1="50" x2="38" y2="52" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
     <line x1="18" y1="55" x2="38" y2="55" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
     <line x1="52" y1="52" x2="72" y2="50" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
     <line x1="52" y1="55" x2="72" y2="55" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
-    <!-- brooch/pin at base of scarf where chin wrap meets -->
-    <circle cx="45" cy="62" r="3" fill="#C5A059"/>
-    <circle cx="45" cy="62" r="1.8" fill="#E8D4A0"/>
-    <!-- paws gripping the border -->
+    <ellipse cx="57.5" cy="46" rx="1.8" ry="2.2" fill="white"/>
+    <!-- mouth -->
+    <path d="M42,59 Q45,63 48,59" stroke="#2E2B26" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <polygon points="45,54 42,58 48,58" fill="#e8b4b8"/>
     <ellipse cx="28" cy="71" rx="10" ry="5" fill="#F4EBD0"/>
     <ellipse cx="62" cy="71" rx="10" ry="5" fill="#F4EBD0"/>
     <line x1="23" y1="70" x2="23" y2="74" stroke="#2E2B26" stroke-width="0.8"/>
@@ -61,7 +57,7 @@
     <line x1="62" y1="69" x2="62" y2="74" stroke="#2E2B26" stroke-width="0.8"/>
     <line x1="67" y1="70" x2="67" y2="74" stroke="#2E2B26" stroke-width="0.8"/>
   </svg>`;
-
+  
   // Topi male header peeker — red kufi cap sitting on top of head
   const HEADER_TOPI = `
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 72" width="90" height="72"
@@ -173,49 +169,50 @@
      ================================================================ */
 
   const MARGIN_HIJABI = `
+  
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 120" width="64" height="120"
        class="cat-margin" aria-hidden="true">
-    <!-- tail curling up behind -->
-    <path d="M32,108 Q58,100 55,78 Q52,62 42,67" stroke="#A33333" stroke-width="5" fill="none" stroke-linecap="round"/>
-    <!-- body -->
-    <ellipse cx="28" cy="92" rx="20" ry="24" fill="#EAD9B0"/>
-    <!-- scarf body drape -->
-    <ellipse cx="28" cy="88" rx="22" ry="26" fill="#A33333" opacity="0.5"/>
-    <!-- head -->
+    <ellipse cx="30" cy="92" rx="20" ry="24" fill="#EAD9B0"/>
     <ellipse cx="30" cy="56" rx="20" ry="19" fill="#F4EBD0"/>
-    <!-- ears -->
     <polygon points="14,45 7,30 22,42" fill="#F4EBD0"/>
     <polygon points="15,44 9,33 21,42" fill="#e8b4b8"/>
     <polygon points="42,43 49,29 36,41" fill="#F4EBD0"/>
     <polygon points="41,42 47,32 37,41" fill="#e8b4b8"/>
-    <!-- HIJAB SCARF -->
-    <ellipse cx="30" cy="44" rx="22" ry="13" fill="#A33333"/>
-    <path d="M10,54 Q4,68 6,88"  fill="#A33333" stroke="#7C2323" stroke-width="1.5" opacity="0.9"/>
-    <path d="M50,54 Q56,68 54,88" fill="#A33333" stroke="#7C2323" stroke-width="1.5" opacity="0.9"/>
-    <path d="M10,60 Q30,70 50,60" fill="none" stroke="#7C2323" stroke-width="2" opacity="0.35"/>
-    <path d="M11,44 Q30,35 49,44" fill="none" stroke="#7C2323" stroke-width="1" opacity="0.3"/>
-    <circle cx="30" cy="68" r="2.5" fill="#C5A059"/>
-    <circle cx="30" cy="68" r="1.5" fill="#E8D4A0"/>
-    <!-- face -->
+
+    <path d="
+      M 8,80
+      C 4,60 10,36 30,36
+      C 50,36 56,60 52,80
+      C 55,100 45,140 30,115
+      C 15,105 5,140 8,85
+      Z
+      M 15,57
+      C 15,46 22,44 30,40
+      C 38,44 45,46 45,57
+      C 45,66 38,69 30,69
+      C 22,69 15,66 15,57
+      Z" fill="#A33333" fill-rule="evenodd" stroke="#7C2323" stroke-width="1.5" />
+
+    <path d="M30,69 Q25,85 10,100" stroke="#7C2323" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M30,69 Q35,85 50,100" stroke="#7C2323" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <circle cx="30" cy="72" r="2.5" fill="#C5A059"/>
+    <circle cx="30" cy="72" r="1.5" fill="#E8D4A0"/>
+
     <ellipse cx="22" cy="54" rx="4" ry="4.5" fill="#1A1A1A"/>
     <ellipse cx="38" cy="54" rx="4" ry="4.5" fill="#1A1A1A"/>
     <ellipse cx="23.2" cy="52.8" rx="1.4" ry="1.6" fill="white"/>
     <ellipse cx="39.2" cy="52.8" rx="1.4" ry="1.6" fill="white"/>
     <polygon points="30,59 28,62 32,62" fill="#e8b4b8"/>
     <path d="M28,62 Q30,65 32,62" stroke="#2E2B26" stroke-width="1" fill="none"/>
-    <line x1="8"  y1="58" x2="20" y2="60" stroke="#2E2B26" stroke-width="0.7" opacity="0.5"/>
-    <line x1="8"  y1="62" x2="20" y2="62" stroke="#2E2B26" stroke-width="0.7" opacity="0.5"/>
-    <line x1="40" y1="60" x2="52" y2="58" stroke="#2E2B26" stroke-width="0.7" opacity="0.5"/>
-    <line x1="40" y1="62" x2="52" y2="62" stroke="#2E2B26" stroke-width="0.7" opacity="0.5"/>
-    <!-- paws -->
-    <ellipse cx="16" cy="116" rx="10" ry="5.5" fill="#F4EBD0"/>
-    <ellipse cx="36" cy="116" rx="10" ry="5.5" fill="#F4EBD0"/>
-    <line x1="11" y1="114" x2="11" y2="119" stroke="#2E2B26" stroke-width="0.7"/>
-    <line x1="16" y1="113" x2="16" y2="119" stroke="#2E2B26" stroke-width="0.7"/>
-    <line x1="21" y1="114" x2="21" y2="119" stroke="#2E2B26" stroke-width="0.7"/>
-    <line x1="31" y1="114" x2="31" y2="119" stroke="#2E2B26" stroke-width="0.7"/>
-    <line x1="36" y1="113" x2="36" y2="119" stroke="#2E2B26" stroke-width="0.7"/>
-    <line x1="41" y1="114" x2="41" y2="119" stroke="#2E2B26" stroke-width="0.7"/>
+  
+    <ellipse cx="18" cy="116" rx="10" ry="5.5" fill="#F4EBD0"/>
+    <ellipse cx="38" cy="116" rx="10" ry="5.5" fill="#F4EBD0"/>
+
+    <!-- whiskers -->
+    <line x1="15" y1="58" x2="27" y2="60" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
+    <line x1="15" y1="63" x2="27" y2="62" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
+     <line x1="33" y1="60" x2="45" y2="58" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
+    <line x1="33" y1="62" x2="45" y2="63" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
   </svg>`;
 
   const MARGIN_TOPI = `
