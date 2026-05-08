@@ -113,7 +113,7 @@
   const CORNER_HIJABI = `
  
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 72" width="90" height="72"
-       class="cat-header-hijabi" role="img">
+       class="cat-corner-peek"  role="img">
        <ellipse cx="45" cy="82" rx="32" ry="20" fill="#A33333"/>
     <ellipse cx="45" cy="46" rx="26" ry="24" fill="#F4EBD0"/>
     
