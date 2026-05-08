@@ -538,7 +538,7 @@ document.querySelectorAll('.cat-margin, .cat-corner-peek').forEach(cat => {
     document.body.appendChild(meow);
 
     // Clean up
-    setTimeout(() => meow.remove(), 2000);
+    setTimeout(() => meow.remove(), 3000);
   });
 });
 
