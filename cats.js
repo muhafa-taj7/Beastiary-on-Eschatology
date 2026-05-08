@@ -169,51 +169,51 @@
      ================================================================ */
 
   const MARGIN_HIJABI = `
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 120" width="64" height="120"
-       class="cat-margin" aria-hidden="true">
-    <ellipse cx="30" cy="92" rx="20" ry="24" fill="#EAD9B0"/>
-    <ellipse cx="30" cy="56" rx="20" ry="19" fill="#F4EBD0"/>
-    <polygon points="14,45 7,30 22,42" fill="#F4EBD0"/>
-    <polygon points="15,44 9,33 21,42" fill="#e8b4b8"/>
-    <polygon points="42,43 49,29 36,41" fill="#F4EBD0"/>
-    <polygon points="41,42 47,32 37,41" fill="#e8b4b8"/>
-
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 72" width="90" height="72"
+       class="cat-header-hijabi" role="img">
+    <ellipse cx="45" cy="82" rx="32" ry="20" fill="#A33333"/>
+    <ellipse cx="45" cy="46" rx="26" ry="24" fill="#F4EBD0"/>
+    
+    <polygon points="22,30 14,12 32,26" fill="#F4EBD0"/>
+    <polygon points="68,30 76,12 58,26" fill="#F4EBD0"/>
+ <polygon points="23,29 16,16 31,26" fill="#e8b4b8"/>
+    <polygon points="67,29 74,16 59,26" fill="#e8b4b8"/>
     <path d="
-      M 8,80
-      C 4,60 10,36 30,36
-      C 50,36 56,60 52,80
-      C 55,100 45,140 30,115
-      C 15,105 5,140 8,85
+      M 15,70
+      C 10,40 20,20 45,20
+      C 70,20 80,40 75,70
+      L 15,70
       Z
-      M 15,57
-      C 15,46 22,44 30,40
-      C 38,44 45,46 45,57
-      C 45,66 38,69 30,69
-      C 22,69 15,66 15,57
+      M 25,50
+      C 25,38 35,34 45,31
+      C 55,34 65,38 65,59
+      C 65,60 55,64 45,64
+      C 35,64 25,60 25,59
       Z" fill="#A33333" fill-rule="evenodd" stroke="#7C2323" stroke-width="1.5" />
 
-    <path d="M30,69 Q25,85 10,100" stroke="#7C2323" stroke-width="1.5" fill="none" opacity="0.6"/>
-    <path d="M30,69 Q35,85 50,100" stroke="#7C2323" stroke-width="1.5" fill="none" opacity="0.6"/>
-    <circle cx="30" cy="72" r="2.5" fill="#C5A059"/>
-    <circle cx="30" cy="72" r="1.5" fill="#E8D4A0"/>
-
-    <ellipse cx="22" cy="54" rx="4" ry="4.5" fill="#1A1A1A"/>
-    <ellipse cx="38" cy="54" rx="4" ry="4.5" fill="#1A1A1A"/>
-    <ellipse cx="23.2" cy="52.8" rx="1.4" ry="1.6" fill="white"/>
-    <ellipse cx="39.2" cy="52.8" rx="1.4" ry="1.6" fill="white"/>
-    <polygon points="30,59 28,62 32,62" fill="#e8b4b8"/>
-    <path d="M28,62 Q30,65 32,62" stroke="#2E2B26" stroke-width="1" fill="none"/>
-  
-    <ellipse cx="18" cy="116" rx="10" ry="5.5" fill="#F4EBD0"/>
-    <ellipse cx="38" cy="116" rx="10" ry="5.5" fill="#F4EBD0"/>
-
+    <circle cx="45" cy="66" r="2.5" fill="#C5A059"/>
+    <ellipse cx="34" cy="48" rx="5" ry="6" fill="#1A1A1A"/>
+    <ellipse cx="56" cy="48" rx="5" ry="6" fill="#1A1A1A"/>
+    <ellipse cx="35.5" cy="46" rx="1.8" ry="2.2" fill="white"/>
     <!-- whiskers -->
-    <line x1="15" y1="58" x2="27" y2="60" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
-    <line x1="15" y1="63" x2="27" y2="62" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
-     <line x1="33" y1="60" x2="45" y2="58" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
-    <line x1="33" y1="62" x2="45" y2="63" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
+    <line x1="18" y1="50" x2="38" y2="52" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
+    <line x1="18" y1="55" x2="38" y2="55" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
+    <line x1="52" y1="52" x2="72" y2="50" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
+    <line x1="52" y1="55" x2="72" y2="55" stroke="#2E2B26" stroke-width="0.8" opacity="0.5"/>
+    <ellipse cx="57.5" cy="46" rx="1.8" ry="2.2" fill="white"/>
+    <!-- mouth -->
+    <path d="M42,59 Q45,63 48,59" stroke="#2E2B26" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <polygon points="45,54 42,58 48,58" fill="#e8b4b8"/>
+    <ellipse cx="28" cy="71" rx="10" ry="5" fill="#F4EBD0"/>
+    <ellipse cx="62" cy="71" rx="10" ry="5" fill="#F4EBD0"/>
+    <line x1="23" y1="70" x2="23" y2="74" stroke="#2E2B26" stroke-width="0.8"/>
+    <line x1="28" y1="69" x2="28" y2="74" stroke="#2E2B26" stroke-width="0.8"/>
+    <line x1="33" y1="70" x2="33" y2="74" stroke="#2E2B26" stroke-width="0.8"/>
+    <line x1="57" y1="70" x2="57" y2="74" stroke="#2E2B26" stroke-width="0.8"/>
+    <line x1="62" y1="69" x2="62" y2="74" stroke="#2E2B26" stroke-width="0.8"/>
+    <line x1="67" y1="70" x2="67" y2="74" stroke="#2E2B26" stroke-width="0.8"/>
   </svg>`;
+  
 
   const MARGIN_TOPI = `
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 120" width="64" height="120"
@@ -271,26 +271,32 @@
      5. CATCHWORD CATS — sleepy hijabi + sleepy topi side by side
      ================================================================ */
   const CATCHWORD_HIJABI = `
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 40" width="40" height="30"
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 40" width="40" height="30"
        class="cat-sleepy cat-sleepy-hijabi" aria-hidden="true">
     <ellipse cx="26" cy="25" rx="20" ry="17" fill="#F4EBD0"/>
-    <!-- ears -->
+    
     <polygon points="9,17 4,4 16,14" fill="#F4EBD0"/>
-    <polygon points="10,16 6,7 15,14" fill="#e8b4b8"/>
     <polygon points="43,17 48,4 36,14" fill="#F4EBD0"/>
-    <polygon points="42,16 46,7 37,14" fill="#e8b4b8"/>
-    <!-- HIJAB SCARF: cap + drapes -->
-    <ellipse cx="26" cy="15" rx="21" ry="12" fill="#A33333"/>
-    <path d="M6,24 Q2,33 4,40"   fill="#A33333" stroke="#7C2323" stroke-width="1.2" opacity="0.9"/>
-    <path d="M46,24 Q50,33 48,40" fill="#A33333" stroke="#7C2323" stroke-width="1.2" opacity="0.9"/>
-    <path d="M6,28 Q26,36 46,28"  fill="none" stroke="#7C2323" stroke-width="2" opacity="0.3"/>
-    <path d="M7,16 Q26,8 45,16"   fill="none" stroke="#7C2323" stroke-width="1" opacity="0.25"/>
-    <circle cx="26" cy="33" r="2"   fill="#C5A059"/>
-    <circle cx="26" cy="33" r="1.2" fill="#E8D4A0"/>
-    <!-- sleepy closed eyes -->
-    <path d="M15,23 Q19,20 23,23" stroke="#1A1A1A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-    <path d="M29,23 Q33,20 37,23" stroke="#1A1A1A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+
+    <path d="
+      M 8,38
+      C 3,15 15,10 26,9
+      C 42,10 48,15 44,38
+      L 8,38
+      Z
+      M 14,24
+      C 14,17 20,15 26,15
+      C 32,15 38,17 38,24
+      C 38,30 32,32 26,32
+      C 20,32 14,30 14,24
+      Z" fill="#A33333" fill-rule="evenodd" stroke="#7C2323" stroke-width="1.2" />
+
+    <circle cx="26" cy="34" r="2" fill="#C5A059"/>
+    
+    <path d="M17,24 Q20,22 23,24" stroke="#1A1A1A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <path d="M29,24 Q32,22 35,24" stroke="#1A1A1A" stroke-width="1.4" fill="none" stroke-linecap="round"/>
     <polygon points="26,28 24,31 28,31" fill="#e8b4b8"/>
+    
     <text x="40" y="13" font-size="7" fill="#A33333" font-family="serif" opacity="0.7">z</text>
     <text x="44" y="7"  font-size="5" fill="#A33333" font-family="serif" opacity="0.5">z</text>
   </svg>`;
