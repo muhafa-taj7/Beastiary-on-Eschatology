@@ -114,6 +114,8 @@
  
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 72" width="90" height="72"
        class="cat-header-hijabi" role="img">
+       <ellipse cx="45" cy="82" rx="32" ry="20" fill="#A33333"/>
+    <ellipse cx="45" cy="46" rx="26" ry="24" fill="#F4EBD0"/>
     
     <polygon points="22,30 14,12 32,26" fill="#F4EBD0"/>
     <polygon points="68,30 76,12 58,26" fill="#F4EBD0"/>
@@ -145,8 +147,7 @@
     <!-- mouth -->
     <path d="M42,59 Q45,63 48,59" stroke="#2E2B26" stroke-width="1.2" fill="none" stroke-linecap="round"/>
     <polygon points="45,54 42,58 48,58" fill="#e8b4b8"/>
-    <ellipse cx="28" cy="71" rx="10" ry="5" fill="#F4EBD0"/>
-    <ellipse cx="62" cy="71" rx="10" ry="5" fill="#F4EBD0"/>
+   
   </svg>
 `;
 
@@ -190,6 +191,8 @@
     <polygon points="15,44 9,33 21,42" fill="#e8b4b8"/>
     <polygon points="42,43 49,29 36,41" fill="#F4EBD0"/>
     <polygon points="41,42 47,32 37,41" fill="#e8b4b8"/>
+            <path d="M32,108 Q67,100 58,78 Q52,62 61,60" stroke="#3D2028" stroke-width="5" fill="none" stroke-linecap="round"/>
+
 
     <path d="
       M 8,80
