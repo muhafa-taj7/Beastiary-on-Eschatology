@@ -572,3 +572,38 @@ blockquote,
 td, th {
   cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8bGluZSB4MT0iNSIgeTE9IjI3IiB4Mj0iMjciIHkyPSI1IiBzdHJva2U9IiMxQTFBMUEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTI3LDUgQzIyLDcgMTYsMTMgOSwyMSBDNywyMyA1LDI3IDUsMjcgQzgsMjQgMTIsMTkgMTYsMTMgQzIwLDggMjUsNSAyNyw1WiIKICAgICAgICBmaWxsPSIjQTMzMzMzIiBzdHJva2U9IiMxQTFBMUEiIHN0cm9rZS13aWR0aD0iMC42Ii8+CiAgPHBhdGggZD0iTTI3LDUgQzI0LDggMjAsMTIgMTYsMTcgQzEzLDIwIDEwLDIzIDcsMjYgQzYsMjcgNSwyNyA1LDI3IEM3LDI1IDEwLDIyIDE0LDE4IEMxOCwxMyAyMyw4IDI3LDVaIgogICAgICAgIGZpbGw9IiNDNTU1NTUiIHN0cm9rZT0ibm9uZSIvPgogIDxsaW5lIHgxPSIyNyIgeTE9IjUiIHgyPSI1IiB5Mj0iMjciIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIwLjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWRhc2hhcnJheT0iMiwyIi8+CiAgPGxpbmUgeDE9IjUiIHkxPSIyNyIgeDI9IjkiIHkyPSIyMSIgc3Ryb2tlPSIjMUExQTFBIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjUiIHkxPSIyNyIgeDI9IjEwIiB5Mj0iMjMiIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNSIgeTE9IjI3IiB4Mj0iNyIgeTI9IjI0IiBzdHJva2U9IiNFQUQ5QjAiIHN0cm9rZS13aWR0aD0iMC42IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI1IiBjeT0iMjciIHI9IjEuNCIgZmlsbD0iIzFBMUExQSIvPgo8L3N2Zz4=') 5 27, text;
 }
+
+/* --- Cat Interactions --- */
+
+/* The "Purr" effect for Margin/Corner cats */
+.cat-purr {
+  animation: purr-pulse 1.2s ease-in-out;
+}
+
+@keyframes purr-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 5px var(--gold)); }
+  100% { transform: scale(1); }
+}
+
+/* The "Awake" effect for the Catchword cat */
+.cat-awake .eye-closed { display: none; }
+.cat-awake .eye-open { display: block !important; }
+.cat-awake .z-text { opacity: 0 !important; transition: 0.3s; }
+
+/* Tooltip/Meow styling */
+.cat-speech {
+  position: absolute;
+  font-family: var(--font-arabic);
+  color: var(--madder);
+  font-size: 1.2rem;
+  pointer-events: none;
+  animation: float-up 2s forwards;
+  z-index: 100;
+}
+
+@keyframes float-up {
+  0% { opacity: 0; transform: translateY(0); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-40px); }
+}
