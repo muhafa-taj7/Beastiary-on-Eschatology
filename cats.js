@@ -287,7 +287,7 @@
 
     .cat-head {
       display: block;
-      transition: transform 0.4s ease-in-out;
+      transition: transform 0.6s ease-in-out;
     }
     .cat-header-wrap:hover .cat-head {
       transform: translateY(60px);
