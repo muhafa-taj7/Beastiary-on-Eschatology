@@ -36,6 +36,7 @@
 html { font-size: 17px; scroll-behavior: smooth; }
 
 body {
+    position: relative;
   background-color: #C8B070;
   background-image:
     repeating-linear-gradient(
@@ -616,4 +617,10 @@ td, th {
 .cat-sleepy,
 .cat-interact {
   cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjE0IiByPSI1IiBmaWxsPSIjQzVBMDU5IiBzdHJva2U9IiMxQTFBMUEiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPGNpcmNsZSBjeD0iNiIgY3k9IjgiIHI9IjMiIGZpbGw9IiNDNUEwNTkiIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjUiIHI9IjMiIGZpbGw9IiNDNUEwNTkiIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8Y2lyY2xlIGN4PSIxOCIgY3k9IjgiIHI9IjMiIGZpbGw9IiNDNUEwNTkiIHN0cm9rZT0iIzFBMUExQSIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KPC9zdmc+') 12 12, pointer !important;
+}
+
+/* 1. Create a "stacking context" on the page so cats don't fall behind the main body background */
+.manuscript-page {
+  position: relative;
+  z-index: 15;
 }
